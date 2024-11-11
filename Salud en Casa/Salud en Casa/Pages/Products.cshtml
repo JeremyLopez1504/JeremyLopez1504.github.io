@@ -1,0 +1,24 @@
+﻿@page
+@model Salud_en_Casa.Pages.ProductsModel
+@{
+    ViewData["Title"] = "Productos";
+}
+
+<div class="container6">
+    <CENTER><h2>Menus Saludables</h2></CENTER>
+    <div class="row">
+        @foreach (var product in Model.Products)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <CENTER><img class="card-img-Products" src="@product.ImageUrl" alt="@product.Name" /></CENTER>
+                    <div class="card-body">
+                        <b> <h5 class="card-title">@product.Name</h5> </b>
+                        <p class="card-text">@product.Description</p>
+                        <p class="card-text">$@product.Price MXN</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

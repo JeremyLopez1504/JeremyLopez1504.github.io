@@ -1,0 +1,47 @@
+﻿@page
+@model Salud_en_Casa.Pages.ContactModel
+@{
+    ViewData["Title"] = "Contacto";
+}
+
+<div class="container-contacto">
+    <h2 class="text-center">Realiza tu Pedido</h2>
+    <form method="post" asp-action="Submit">
+        <div class="form-group">
+            <label asp-for="ContactMessage.Name">Nombre</label>
+            <input type="text" class="form-control" asp-for="ContactMessage.Name" required>
+        </div>
+
+@*         <div class="form-group">
+            <label asp-for="ContactMessage.Email">Correo electrónico*</label>
+            <input type="email" class="form-control" asp-for="ContactMessage.Email" required>
+        </div> *@
+
+        <div class="form-group">
+            <label asp-for="ContactMessage.PhoneNumber">Número de celular*</label>
+            <input type="tel" class="form-control" asp-for="ContactMessage.PhoneNumber" required>
+        </div>
+
+@*         <div class="form-group">
+            <label asp-for="ContactMessage.Age">Edad</label>
+            <input type="number" class="form-control" asp-for="ContactMessage.Age" min="0" max="120">
+        </div> *@
+
+        <div class="form-group">
+            <label asp-for="ContactMessage.Address">Dirección*</label>
+            <input type="text" class="form-control" asp-for="ContactMessage.Address" required>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ContactMessage.Order">Pedido</label>
+            <input type="text" class="form-control" asp-for="ContactMessage.Order">
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ContactMessage.Specifications">Especificaciones</label>
+            <textarea class="form-control" asp-for="ContactMessage.Specifications" rows="3"></textarea>
+        </div>
+
+        <CENTER> <button type="submit" class="BOTON-Contacto">Enviar</button> </CENTER>
+    </form>
+</div>
